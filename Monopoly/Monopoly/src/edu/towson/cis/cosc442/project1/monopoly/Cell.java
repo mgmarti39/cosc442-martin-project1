@@ -25,7 +25,11 @@ public abstract class Cell implements IOwnable {
 		return available;
 	}
 	
-	public abstract void playAction();
+	public  boolean playAction(String msg){
+		
+	return false;
+	}
+	
 
 	public void setAvailable(boolean available) {
 		this.available = available;
@@ -46,4 +50,9 @@ public abstract class Cell implements IOwnable {
     public String toString() {
         return name;
     }
+
+	public void playAction(Object msg) {
+		// TODO Auto-generated method stub
+		
+	}
 }
