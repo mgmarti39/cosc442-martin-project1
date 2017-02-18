@@ -65,8 +65,11 @@ public class Player {
 	}
 	
 	public void exchangeProperty(Player player) {
+		
 		for(int i = 0; i < getPropertyNumber(); i++ ) {
 			PropertyCell cell = getProperty(i);
+			
+			String colorGroup = cell.getColorGroup();
 			cell.setOwner(player);
 			if(player == null) {
 				cell.setAvailable(true);
@@ -74,6 +77,7 @@ public class Player {
 			}
 			else {
 				player.properties.add(cell);
+				
 				colorGroups.put(
 						cell.getColorGroup(), 
 						new Integer(getPropertyNumberForColor(cell.getColorGroup())+1));
